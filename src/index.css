@@ -5,3 +5,43 @@
 .input {
   @apply border rounded-lg px-3 py-2 w-full;
 }
+
+.hero-section {
+  @apply relative w-full h-[350px] overflow-hidden bg-gray-900;
+}
+
+.hero-slide {
+  @apply absolute inset-0 w-full h-full bg-cover bg-center flex items-center transition-opacity duration-1000 ease-in-out;
+}
+
+.hero-slide-active {
+  @apply opacity-100 z-10;
+}
+
+.hero-slide-inactive {
+  @apply opacity-0 z-0;
+}
+
+.hero-control-prev {
+  @apply absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity z-20;
+}
+
+.hero-control-next {
+  @apply absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity z-20;
+}
+
+.hero-indicators {
+  @apply absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20;
+}
+
+.hero-indicator {
+  @apply transition-all w-3 h-3 rounded-full;
+}
+
+.hero-indicator-active {
+  @apply bg-red-500 w-6;
+}
+
+.hero-indicator-inactive {
+  @apply bg-white/50 hover:bg-white;
+}
