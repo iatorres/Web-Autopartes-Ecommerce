@@ -1,6 +1,26 @@
+import { useState } from "react";
 import { ShoppingCart, User, Search, Menu } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const CATEGORIES = [
+  "REPUESTOS AUTOS Y CAMIONETAS",
+  "REPUESTOS DE LÍNEA PESADA",
+  "REPUESTOS MOTOS Y CUATRICICLOS",
+  "LIMPIEZA DE VEHÍCULOS",
+  "CÁMARAS Y ACCESORIOS",
+  "SALUD Y EQUIPAMIENTO MÉDICO",
+  "AGRO",
+  "ELECTRODOMÉSTICOS Y AIRES AC.",
+  "HERRAMIENTAS",
+  "HOGAR, MUEBLES Y JARDÍN",
+  "DEPORTES Y FITNESS",
+  "DESCUENTOS CYBER",
+  "ACCESORIOS PARA VEHÍCULOS",
+];
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="w-full">
 
@@ -44,22 +64,31 @@ export default function Navbar() {
 
         {/* Categories Menu */}
         <div className="bg-blue-800 text-sm">
-          <div className="max-w-7xl mx-auto px-6 py-3 flex items-center gap-6 overflow-x-auto">
+          <div className="max-w-7xl mx-auto px-6 py-3">
+            <div className="relative inline-block">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="flex items-center gap-2 font-semibold cursor-pointer hover:text-blue-200 transition-colors"
+              >
+                <Menu size={18} />
+                Categorías
+              </button>
 
-            <div className="flex items-center gap-2 font-semibold cursor-pointer">
-              <Menu size={18} />
-              Categorías
+              {isOpen && (
+                <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl z-50 py-2 text-gray-800 border border-gray-100">
+                  {CATEGORIES.map((cat) => (
+                    <Link
+                      key={cat}
+                      to={`/categoria/${encodeURIComponent(cat)}`}
+                      className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700 transition-colors border-b border-gray-50 last:border-0"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {cat}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
-
-            <span className="cursor-pointer hover:text-gray-300">Motor</span>
-            <span className="cursor-pointer hover:text-gray-300">Suspensión</span>
-            <span className="cursor-pointer hover:text-gray-300">Iluminación</span>
-            <span className="cursor-pointer hover:text-gray-300">Inyección</span>
-            <span className="cursor-pointer hover:text-gray-300">Transmisión</span>
-            <span className="cursor-pointer hover:text-gray-300">Encendido</span>
-            <span className="cursor-pointer hover:text-gray-300">Accesorios</span>
-            <span className="cursor-pointer hover:text-gray-300">Más</span>
-
           </div>
         </div>
       </div>

@@ -1,0 +1,60 @@
+// c:\Users\luiss\OneDrive\Documents\GitHub\Web-Autopartes-Ecommerce\src\data\products.js
+
+export const products = [
+  {
+    id: 1,
+    name: "Amortiguador Delantero Reforzado",
+    price: 45000,
+    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=500&auto=format&fit=crop",
+    category: "REPUESTOS AUTOS Y CAMIONETAS",
+  },
+  {
+    id: 2,
+    name: "Neumático Camión 295/80 R22.5",
+    price: 450000,
+    image: "https://images.unsplash.com/photo-1578844251758-2f71da645217?q=80&w=500&auto=format&fit=crop",
+    category: "REPUESTOS DE LÍNEA PESADA",
+  },
+  {
+    id: 3,
+    name: "Casco Integral Deportivo Certificado",
+    price: 85000,
+    image: "https://images.unsplash.com/photo-1558981806-ec527fa84c3d?q=80&w=500&auto=format&fit=crop",
+    category: "REPUESTOS MOTOS Y CUATRICICLOS",
+  },
+  {
+    id: 4,
+    name: "Kit Limpieza Premium Cera + Shampoo",
+    price: 15000,
+    image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=500&auto=format&fit=crop",
+    category: "LIMPIEZA DE VEHÍCULOS",
+  },
+  {
+    id: 5,
+    name: "Cámara Dashcam 4K con GPS",
+    price: 65000,
+    image: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=500&auto=format&fit=crop",
+    category: "CÁMARAS Y ACCESORIOS",
+  },
+  {
+    id: 6,
+    name: "Juego de Herramientas Mecánicas 108pz",
+    price: 95000,
+    image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=500&auto=format&fit=crop",
+    category: "HERRAMIENTAS",
+  },
+  {
+    id: 7,
+    name: "Compresor de Aire Portátil 12V",
+    price: 38000,
+    image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?q=80&w=500&auto=format&fit=crop",
+    category: "ACCESORIOS PARA VEHÍCULOS",
+  },
+  {
+    id: 8,
+    name: "Taladro Percutor Inalámbrico Profesional",
+    price: 110000,
+    image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=500&auto=format&fit=crop",
+    category: "HERRAMIENTAS",
+  },
+];
