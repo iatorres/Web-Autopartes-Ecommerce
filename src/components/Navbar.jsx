@@ -34,9 +34,9 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
 
           {/* Logo */}
-          <div className="text-2xl font-bold tracking-wide">
+          <Link to="/" className="text-2xl font-bold tracking-wide">
             Ratoncito <span className="font-light">Autopartes</span>
-          </div>
+          </Link>
 
           {/* Search */}
           <div className="flex-1 max-w-2xl relative">

@@ -4,13 +4,11 @@ import ProductDetail from "./pages/ProductDetail";
 import CategoryPage from "./pages/CategoryPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Hero />
       <main className="min-h-screen bg-gray-50">
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, CreditCard, Truck, Wrench, Car, Bike, Zap } from "lucide-react";
+import Hero from "../components/Hero";
 
 const FEATURED_CATEGORIES = [
   { name: "REPUESTOS AUTOS Y CAMIONETAS", icon: Car, color: "bg-blue-100 text-blue-600" },
@@ -10,7 +11,9 @@ const FEATURED_CATEGORIES = [
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-8">
+    <>
+      <Hero />
+      <div className="max-w-7xl mx-auto px-6 py-8">
       
       {/* Info Banners */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -81,5 +84,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </>
   );
 }
