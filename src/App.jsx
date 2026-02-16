@@ -1,14 +1,19 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import CategoryPage from "./pages/CategoryPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 
-export default function App() {
+function AppContent() {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
+      {isHomePage && <Hero />}
       <main className="min-h-screen bg-gray-50">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -17,6 +22,14 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }
